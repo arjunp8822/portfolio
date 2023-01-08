@@ -1,0 +1,225 @@
+:root {
+    --primaryColor: #00eaff;
+    --primaryHover: hsl(185, 92%, 41%);
+    --secondaryColor: rgb(150, 162, 188);
+    --paragraphColor: rgb(127, 127, 175);
+    --BgColor: #031a30;
+    --formColor: rgb(2, 15, 29);
+    --projectCardColor: #072340;
+    --textColor: #dae4fb;
+    --headerHeight: 3rem;
+}
+
+.about {
+    .sectionContent {
+        gap: 5rem;
+
+        .animation {
+            // width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation-name: spincube;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 12s;
+            transform-style: preserve-3d;
+            
+            // transform-origin: 100px 100px 0;
+
+            div {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #ccc;
+                background: rgba(2, 0, 28, 0.4);
+                font-size: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 0 20px 0px var(--primaryColor);
+            }
+
+            .face1 {
+                transform: translateZ(100px);
+            }
+            .face2 {
+                transform: rotateY(90deg) translateZ(100px);
+            }
+            .face3 {
+                transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+            }
+            .face4 {
+                transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+            }
+            .face5 {
+                transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+            }
+            .face6 {
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+
+            .animation-icon-1 {
+                color: white;
+            }
+            .animation-icon-2 {
+                color: white;
+            }
+            .animation-icon-3 {
+                color: white;
+            }
+            .animation-icon-4 {
+                color: white;
+            }
+            .animation-icon-5 {
+                color: white;
+            }
+            .animation-icon-6 {
+                color: white;
+            }
+
+            @keyframes spincube {
+                from,
+                to {
+                    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                }
+                16%{
+                    transform: rotateY(-90deg);
+                }
+                33%{
+                    transform: rotateY(-90deg) rotateZ(90deg);
+                }
+                50%{
+                    transform: rotateY(-180deg) rotateZ(90deg);
+                }
+                66%{
+                    transform: rotateY(-270deg) rotateZ(90deg);
+                }
+                83%{
+                    transform: rotateX(90deg);
+                }
+            }
+        }
+        .textSection {
+            color: var(--secondaryColor);
+            font-size: 1.1rem;
+            max-width: 100%;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin: auto;
+        }
+
+        .aboutBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            background: var(--primaryColor);
+            width: max-content;
+            padding: 1rem 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--primaryColor);
+
+            &:hover {
+                background: none;
+                border: 1px solid var(--primaryColor);
+                a {
+                    color: var(--primaryColor);
+                }
+                .icon {
+                    color: var(--primaryColor);
+                }
+            }
+
+            a {
+                color: var(--projectCardColor);
+                font-size: 1.2rem;
+                font-weight: 600;
+                cursor: pointer;
+                gap: 0.5rem;
+                .icon {
+                    color: var(--projectCardColor);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .animation {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .about {
+        .sectionContent {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .about {
+        .sectionContent {
+            .textSection {
+                h4 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.working-history {
+    .aboutBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        background: var(--primaryColor);
+        width: max-content;
+        padding: 1rem 1rem;
+        border-radius: 10px;
+        border: 1px solid var(--primaryColor);
+
+        &:hover {
+            background: none;
+            border: 1px solid var(--primaryColor);
+            a {
+                color: var(--primaryColor);
+            }
+            .icon {
+                color: var(--primaryColor);
+            }
+        }
+
+        a {
+            color: var(--projectCardColor);
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            gap: 0.5rem;
+            .icon {
+                color: var(--projectCardColor);
+            }
+        }
+    }
+
+    .history {
+        margin-top: 4rem;
+    }
+}

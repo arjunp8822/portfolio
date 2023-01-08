@@ -1,0 +1,261 @@
+:root {
+    --primaryColor: #00eaff;
+    --primaryHover: hsl(185, 92%, 41%);
+    --secondaryColor: rgb(150, 162, 188);
+    --paragraphColor: rgb(127, 127, 175);
+    --BgColor: #031a30;
+    --formColor: rgb(2, 15, 29);
+    --projectCardColor: #072340;
+    --textColor: #dae4fb;
+    --headerHeight: 3rem;
+}
+
+.home {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .leftIcons, .rightEmail {
+        display: none;
+    }
+    .homeContainer {
+        padding: 0 1.5rem;
+
+        .introText {
+            font-size: 1.3rem;
+            color: var(--primaryColor);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .title {
+            font-size: 3.3rem;
+            font-weight: 600;
+            color: var(--textColor);
+            padding: 0.7rem 0;
+        }
+
+        .subTitle {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--secondaryColor);
+            line-height: 2rem;
+            padding: 0.5rem 0;
+
+        }
+
+        .homeParagraph {
+            padding: 1rem 0;
+            color: var(--paragraphColor);
+            max-width: 600px;
+
+        }
+
+        .lowerHomeSection {
+
+            .containerBtn {
+                padding: 0.6rem 1rem;
+                background: var(--primaryColor);
+                color: var(--BgColor);
+                border: 1px solid var(--primaryColor);
+                outline: none;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .arrow {
+                    display: flex;
+                    align-items: center;
+                    font-size: 23px;
+                }
+
+                &:hover {
+                    background: none;
+                    border: 1px solid var(--primaryColor);
+                    .flex {
+                        color: var(--primaryColor);
+                    }
+                    .arrow-icon {
+                        color: var(--primaryColor);
+                        transform: translateX(5px);
+                    }
+                }
+
+                a {
+                    font-size: 23px;
+                    font-weight: 600;
+                    gap: 0.5rem;
+                    color: var(--BgColor);
+
+                }
+            }
+
+            .scrollDiv {
+                padding-top: 1rem;
+                display: flex;
+                align-items: center;
+                
+                .scroll {
+                    font-size: 1rem;
+                    color: var(--secondaryColor);
+                }
+
+                .icon {
+                    font-size: 1.3rem;
+                    margin-left: 0.6rem;
+                    color: var(--secondaryColor);
+                    animation: move 1s infinite;
+                }
+                
+                @keyframes move {
+                    0%{
+                        transform: translateY(0px);
+                    }
+                    25%{
+                        transform: translateY(5px);
+                    }
+                    50%{
+                        transform: translateY(-2px);
+                    }
+                    75%{
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .home {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .home {
+        
+        .homeContainer {
+            padding: 0 1.5rem;
+            .introText {
+                font-size: 1.5rem;
+            }
+
+            .title {
+                font-size: 3.5rem;
+            }
+
+            .subTitle {
+                font-size: 2.1rem;
+                margin-top: 3rem;
+            }
+
+            .homeParagraph {
+                font-size: 1.5rem;
+                margin-top: 3rem;
+            }
+
+            .lowerHomeSection {
+                .containerBtn {
+                    padding: 0.8rem 1.5rem;
+                    margin-top: 2rem;
+                }
+                .scrollDiv {
+                    padding-top: 1.5rem;
+                    .icon {
+                        font-size: 1.5rem;
+                    }
+            }
+
+            
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .home {
+        .homeContainer {
+            padding: 0 1.5rem;
+            width: 70%;
+            margin: auto;          
+            }
+
+        .leftIcons, .rightEmail {
+            display: block;
+            position: fixed;
+            .icon {
+                color: var(--secondaryColor);
+            }
+            a{
+                font-weight: 600;
+                color: var(--secondaryColor);
+            }
+
+            .line {
+                margin: auto;
+                content: '';
+                background: var(--secondaryColor);
+                height: 100px;
+                width: 1px;
+            }
+        }
+
+        .leftIcons {
+           left: 5%;
+           bottom: 0;
+           .social {
+            gap: 1rem;
+            a {
+                .icon {
+                    color: var(--textColor);
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+           }
+        }
+
+        .rightEmail {
+            right: 0;
+            bottom: 0;
+            .emailAddress {
+                transform: rotate(90deg) translate(-90px, 0px);
+                a {
+                    color: var(--textColor);
+                    letter-spacing: 1px;
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+
+        }
+    }
+
+    @media screen and (min-width: 1240px) {
+        .home {
+            .homeContainer {
+                padding: 0 6rem;
+                .introText {
+                    font-size: 1.5rem;
+                }
+
+                .title {
+                    font-size: 5rem;
+                }
+
+                .subTitle {
+                    line-height: 2.5rem;
+                    font-size: 2.4rem;
+                }
+
+                .homeParagraph {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
