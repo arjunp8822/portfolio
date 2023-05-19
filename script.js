@@ -1,3 +1,5 @@
+// loader
+
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loader')
     const lineOne = document.querySelector('.line-1')
@@ -15,8 +17,72 @@ window.addEventListener('load', () => {
     }, 4100)
 })
 
+// mobile navbar
+
 const mobileIcon = document.querySelector('.mobile-icon')
 const navLinks = document.querySelector('.nav-links')
+const mobileOne = document.querySelector('.mob-one')
+const mobileTwo = document.querySelector('.mob-two')
+const mobileThree = document.querySelector('.mob-three')
+const sections = document.querySelectorAll('section')
+
+let openMobileNav = 0
+
 mobileIcon.addEventListener('click', () => {
-    navLinks.classList.add('.nav-links-show')
+    if (openMobileNav === 1) {
+        navLinks.classList.remove('nav-links-show')
+        mobileOne.classList.remove('mob-one-open')
+        mobileTwo.classList.remove('mob-two-open')
+        mobileThree.classList.remove('mob-three-open')
+        openMobileNav = 0
+        sections.forEach((section) => {
+            section.classList.remove('blur')
+        })
+    } else {
+        navLinks.classList.add('nav-links-show')
+        mobileOne.classList.add('mob-one-open')
+        mobileTwo.classList.add('mob-two-open')
+        mobileThree.classList.add('mob-three-open')
+        openMobileNav = 1
+        sections.forEach((section) => {
+            section.classList.add('blur')
+        })
+    }
+})
+
+// work scroller
+
+const workScroller = document.querySelector('.work-scroller')
+const ri = document.querySelector('.work-role-ri')
+const wesfarmers = document.querySelector('.work-role-wesfarmers')
+const mazars = document.querySelector('.work-role-mazars')
+
+ri.addEventListener('click', () => {
+    workScroller.classList.remove('work-role-one')
+    workScroller.classList.remove('work-role-two')
+    workScroller.classList.remove('work-role-three')
+    workScroller.classList.add('work-role-one')
+    mazars.classList.remove('work-role-active')
+    wesfarmers.classList.remove('work-role-active')
+    ri.classList.add('work-role-active')
+})
+
+wesfarmers.addEventListener('click', () => {
+    workScroller.classList.remove('work-role-one')
+    workScroller.classList.remove('work-role-two')
+    workScroller.classList.remove('work-role-three')
+    ri.classList.remove('work-role-active')
+    mazars.classList.remove('work-role-active')
+    workScroller.classList.add('work-role-two')
+    wesfarmers.classList.add('work-role-active')
+})
+
+mazars.addEventListener('click', () => {
+    workScroller.classList.remove('work-role-one')
+    workScroller.classList.remove('work-role-two')
+    workScroller.classList.remove('work-role-three')
+    ri.classList.remove('work-role-active')
+    wesfarmers.classList.remove('work-role-active')
+    workScroller.classList.add('work-role-three')
+    mazars.classList.add('work-role-active')
 })
