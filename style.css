@@ -399,16 +399,12 @@ section {
 
 /* work */
 
-#work {
-    /* position: relative; */
-}
-
 .work-container {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
     width: 100%;
 }
 
@@ -420,6 +416,14 @@ section {
     position: relative;
     flex-shrink: 2;
     width: 100%;
+}
+
+.work-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
 }
 
 .work-container h3 {
@@ -445,6 +449,8 @@ section {
 
 .work-scroller {
     overflow: hidden;
+    min-width: 180px;
+    z-index: 2000;
 }
 
 .work-scroller ul {
@@ -453,16 +459,18 @@ section {
     justify-content: center;
     align-items: flex-start;
     position: relative;
+
 }
 
 .work-scroller li {
     height: 40px;
-    width: 150px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 20px;
     font-family: var(--font-mono);
+    width: 100%;
+    font-size: 14px;
 }
 
 .work-scroller ul::before {
@@ -483,6 +491,12 @@ section {
     color: var(--slate);
 }
 
+.work-role-ri:hover,
+.work-role-wesfarmers:hover,
+.work-role-mazars :hover {
+    cursor: pointer;
+}
+
 .work-role-active {
     background-color: var(--lightest-navy);
     color: var(--green);
@@ -498,6 +512,70 @@ section {
 
 .work-role-three ul::before {
     transform: translateY(40px);
+}
+
+.jd-ri,
+.jd-wesfarmers,
+.jd-mazars {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: none;
+}
+
+.jd-active {
+    display: flex;
+}
+
+.jd-ri h4,
+.jd-wesfarmers h4,
+.jd-mazars h4 {
+    font-size: clamp(15px, 3vw, 20px);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--lightest-slate);
+    margin-bottom: 5px;
+}
+
+.jd-ri span,
+.jd-wesfarmers span,
+.jd-mazars span {
+    font-size: clamp(15px, 3vw, 20px);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--green);
+    font-family: var(--font-sans);
+}
+
+.jd-ri h5,
+.jd-wesfarmers h5,
+.jd-mazars h5 {
+    margin-bottom: 25px;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: clamp(10px, 3vw, 14px);
+}
+
+.jd-ri li,
+.jd-wesfarmers li,
+.jd-mazars li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: clamp(12px, 3.5vw, 15px);
+    color: var(--slate);
+    font-family: var(--font-sans);
+    line-height: 1.3;
+}
+
+.jd-ri li::before,
+.jd-wesfarmers li::before,
+.jd-mazars li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: var(--green);
 }
 
 @media (max-width: 768px) {
@@ -601,10 +679,91 @@ section {
     .sidebar-container-left {
         display: none;
     }
+
+    .work-content {
+        flex-direction: column;
+    }
+
+    .work-scroller {
+        overflow: visible;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-scroller ul {
+        flex-direction: row;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-scroller li {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+    }
+
+    .work-scroller ul::before {
+        content: '';
+        position: absolute;
+        background-color: var(--green);
+        height: 180px;
+        width: 2px;
+        transform: rotate(90deg) translateX(20px);
+        transition: var(--transition);
+    }
+
+
+    .work-role-one ul::before {
+        transform: rotate(90deg) translate(20px, 180px);
+    }
+
+    .work-role-two ul::before {
+        transform: rotate(90deg) translate(20px, 0px);
+    }
+
+    .work-role-three ul::before {
+        transform: rotate(90deg) translate(20px, -180px);
+    }
+
+    .work-scroller li {
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
+
     .intro-container {
         gap: 20px;
+    }
+
+    .work-scroller li {
+        width: 100px;
+    }
+
+    .work-scroller ul::before {
+        height: 100px;
+    }
+
+    .work-role-one ul::before {
+        transform: rotate(90deg) translate(20px, 100px);
+    }
+
+    .work-role-three ul::before {
+        transform: rotate(90deg) translate(20px, -100px);
+    }
+
+    .work-role-ri,
+    .work-role-wesfarmers,
+    .work-role-mazars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

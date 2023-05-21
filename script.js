@@ -56,6 +56,9 @@ const workScroller = document.querySelector('.work-scroller')
 const ri = document.querySelector('.work-role-ri')
 const wesfarmers = document.querySelector('.work-role-wesfarmers')
 const mazars = document.querySelector('.work-role-mazars')
+const jdri = document.querySelector('.jd-ri')
+const jdwesfarmers = document.querySelector('.jd-wesfarmers')
+const jdmazars = document.querySelector('.jd-mazars')
 
 ri.addEventListener('click', () => {
     workScroller.classList.remove('work-role-one')
@@ -65,6 +68,9 @@ ri.addEventListener('click', () => {
     mazars.classList.remove('work-role-active')
     wesfarmers.classList.remove('work-role-active')
     ri.classList.add('work-role-active')
+    jdwesfarmers.classList.remove('jd-active')
+    jdmazars.classList.remove('jd-active')
+    jdri.classList.add('jd-active')
 })
 
 wesfarmers.addEventListener('click', () => {
@@ -75,6 +81,9 @@ wesfarmers.addEventListener('click', () => {
     mazars.classList.remove('work-role-active')
     workScroller.classList.add('work-role-two')
     wesfarmers.classList.add('work-role-active')
+    jdri.classList.remove('jd-active')
+    jdmazars.classList.remove('jd-active')
+    jdwesfarmers.classList.add('jd-active')
 })
 
 mazars.addEventListener('click', () => {
@@ -85,4 +94,7 @@ mazars.addEventListener('click', () => {
     wesfarmers.classList.remove('work-role-active')
     workScroller.classList.add('work-role-three')
     mazars.classList.add('work-role-active')
+    jdri.classList.remove('jd-active')
+    jdwesfarmers.classList.remove('jd-active')
+    jdmazars.classList.add('jd-active')
 })
