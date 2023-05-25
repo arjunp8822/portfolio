@@ -177,7 +177,7 @@ section {
     align-items: center;
 }
 
-.nav-links li {
+.nav-links a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +185,7 @@ section {
     transition: var(--transition);
 }
 
-.nav-links li:hover {
+.nav-links a:hover {
     color: var(--green);
     cursor: pointer;
 }
