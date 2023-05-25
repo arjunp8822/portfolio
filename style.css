@@ -55,7 +55,7 @@ section {
     width: 100%;
     transition-duration: 4s;
     background-color: var(--dark-navy);
-    top: 100px;
+    z-index: 1001;
 }
 
 .container {
@@ -145,6 +145,7 @@ section {
     font-weight: 600;
     font-size: 40px;
     color: var(--green);
+    background-color: transparent;
 }
 
 /* navbar */
@@ -362,6 +363,7 @@ section {
     outline: none;
     box-shadow: 4px 4px 0 0 var(--green);
     transform: translate(-5px, -5px);
+    cursor: pointer;
 }
 
 /* sidebar */
@@ -750,7 +752,18 @@ section {
 
 .project-img-container {
     width: 100%;
+    position: relative;
+    border-radius: 4px;
 }
+
+.project-img-container:hover {
+    cursor: pointer;
+}
+
+.project-img-container:hover .img-bg {
+    opacity: 0;
+}
+
 
 .project-text {
     width: 100%;
@@ -761,9 +774,24 @@ section {
     gap: 20px;
 }
 
+.img-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: var(--green);
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
 .project-img {
     width: 100%;
     object-fit: contain;
+    z-index: 1;
+    border-radius: 4px;
 }
 
 .project-cta {
@@ -778,6 +806,11 @@ section {
     background-color: transparent;
 }
 
+.project-cta-icon:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
 .project-text h5 {
     color: var(--green);
     font-family: var(--font-mono);
@@ -790,6 +823,12 @@ section {
     color: var(--lightest-slate);
     font-size: clamp(20px, 5vw, 24px);
     background-color: transparent;
+    transition: var(--transition);
+}
+
+.project-text h3:hover {
+    color: var(--green);
+    cursor: pointer;
 }
 
 .project-text p {
@@ -876,6 +915,13 @@ section {
     text-decoration: none;
     transition: var(--transition);
     margin-top: 20px;
+}
+
+.contact-text button:hover {
+    outline: none;
+    box-shadow: 4px 4px 0 0 var(--green);
+    transform: translate(-5px, -5px);
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
