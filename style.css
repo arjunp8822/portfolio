@@ -483,7 +483,7 @@ section {
 .about-text-container p {
     color: var(--slate);
     font-family: var(--font-sans);
-    font-size: clamp(10px, 4vw, 20px);
+    font-size: clamp(10px, 4vw, 18px);
     line-height: 1.3;
 }
 
@@ -727,6 +727,99 @@ section {
     width: 100%;
 }
 
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.project-img-container {
+    width: 100%;
+}
+
+.project-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.project-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.project-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: transparent;
+}
+
+.project-cta-icon {
+    color: var(--slate);
+    background-color: transparent;
+}
+
+.project-text h5 {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.project-text h3 {
+    color: var(--lightest-slate);
+    font-size: clamp(20px, 5vw, 24px);
+    background-color: transparent;
+}
+
+.project-text p {
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 4px;
+    background-color: var(--light-navy);
+    color: var(--light-slate);
+    font-size: 15px;
+    text-align: end;
+    width: calc(100% + 50px);
+}
+
+.project-skills {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: transparent;
+}
+
+.project-skills li {
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    white-space: nowrap;
+    background-color: transparent;
+}
+
+.project-container .project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-container .project:nth-child(even) .project-text {
+    align-items: flex-start;
+}
+
+.project-container .project:nth-child(even) .project-text p {
+    text-align: start;
+}
+
 @media (max-width: 1200px) {
     .about-info {
         display: flex;
@@ -933,6 +1026,54 @@ section {
         padding-left: 0;
         text-align: center;
     }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        gap: 50px;
+    }
+
+    .project {
+        flex-direction: column;
+        max-width: 90%;
+        gap: 30px;
+        height: auto;
+        background-color: var(--light-navy);
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .project-text {
+        align-items: flex-start;
+        background-color: var(--light-navy);
+    }
+
+    .project-text p {
+        text-align: start;
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .project-img-container {
+        width: 100%;
+    }
+
+    .project-container .project:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .project-container .project:nth-child(even) .project-text {
+        align-items: flex-start;
+    }
+
+    .project-container .project:nth-child(even) .project-text p {
+        text-align: start;
+    }
 }
 
 @media (max-width: 480px) {
@@ -963,5 +1104,10 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .project-container {
+        padding: 0;
+        gap: 40px;
     }
 }
