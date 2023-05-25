@@ -25,6 +25,9 @@ const mobileOne = document.querySelector('.mob-one')
 const mobileTwo = document.querySelector('.mob-two')
 const mobileThree = document.querySelector('.mob-three')
 const sections = document.querySelectorAll('section')
+const navList = document.querySelectorAll('.nav-button')
+
+console.log(navList)
 
 let openMobileNav = 0
 
@@ -48,6 +51,19 @@ mobileIcon.addEventListener('click', () => {
             section.classList.add('blur')
         })
     }
+})
+
+navList.forEach((link) => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-links-show')
+        mobileOne.classList.remove('mob-one-open')
+        mobileTwo.classList.remove('mob-two-open')
+        mobileThree.classList.remove('mob-three-open')
+        openMobileNav = 0
+        sections.forEach((section) => {
+            section.classList.remove('blur')
+        })
+    })
 })
 
 // work scroller
