@@ -130,3 +130,7 @@ hiddenElementsUp.forEach((el) => observer.observe(el))
 
 const hiddenElements = document.querySelectorAll('.hide')
 hiddenElements.forEach((el) => observer.observe(el))
+
+// move to top on refresh
+
+window.onload = function () { document.body.scrollTop = document.documentElement.scrollTop = 0; };

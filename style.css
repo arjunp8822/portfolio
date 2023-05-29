@@ -286,7 +286,7 @@ section {
     flex-direction: column;
     gap: 30px;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 100px);
 }
 
 .intro-container h3 {
@@ -948,60 +948,60 @@ section {
     transform: translateY(0);
 }
 
-.logo {
-    transition-delay: 100ms;
+.logo-container {
+    transition-delay: 4200ms;
 }
 
 .hide-down:nth-child(1) {
-    transition-delay: 400ms;
+    transition-delay: 4600ms;
 }
 
 .hide-down:nth-child(2) {
-    transition-delay: 500ms;
+    transition-delay: 4700ms;
 }
 
 .hide-down:nth-child(2) {
-    transition-delay: 600ms;
+    transition-delay: 4800ms;
 }
 
 .hide-down:nth-child(3) {
-    transition-delay: 700ms;
+    transition-delay: 4900ms;
 }
 
 .hide-down:nth-child(4) {
-    transition-delay: 800ms;
+    transition-delay: 5000ms;
 }
 
 .hide-down:nth-child(5) {
-    transition-delay: 900ms;
+    transition-delay: 5100ms;
 }
 
 .mobile-icon {
-    transition-delay: 300ms;
+    transition-delay: 4400ms;
 }
 
 .intro-container .hide-up:nth-child(1) {
-    transition-delay: 1200ms;
+    transition-delay: 5300ms;
 }
 
 .intro-container .hide-up:nth-child(2) {
-    transition-delay: 1300ms;
+    transition-delay: 5400ms;
 }
 
 .intro-container .hide-up:nth-child(3) {
-    transition-delay: 1400ms;
+    transition-delay: 5500ms;
 }
 
 .intro-container .hide-up:nth-child(4) {
-    transition-delay: 1500ms;
+    transition-delay: 5600ms;
 }
 
 .intro-container .hide-up:nth-child(5) {
-    transition-delay: 1600ms;
+    transition-delay: 5700ms;
 }
 
 .sidebar-container-left {
-    transition-delay: 2000ms;
+    transition-delay: 6100ms;
 }
 
 .about-container,
@@ -1011,6 +1011,7 @@ section {
 .contact-container {
     transition-delay: 300ms;
 }
+
 
 @media (max-width: 1200px) {
     .about-info {
@@ -1283,6 +1284,10 @@ section {
     .project-container .project:nth-child(even) .project-text p {
         text-align: start;
     }
+
+    .nav-links ul .hide-down {
+        transition: 0s;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1329,5 +1334,4 @@ section {
         padding: 0;
         gap: 40px;
     }
-
 }
