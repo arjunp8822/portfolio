@@ -14,7 +14,7 @@
 
 <body>
     <!-- loader -->
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="square">
             <span class="line line-1"></span>
             <span class="line line-2"></span>
@@ -22,11 +22,11 @@
             <span class="line line-4"></span>
             <h1 class="square-logo">AP</h1>
         </div>
-    </div>
+    </div> -->
 
     <!-- navbar -->
     <nav id="navbar">
-        <a href="#">
+        <a href="#" class="logo hide-down">
             <div class="logo-container">
                 AP
             </div>
@@ -34,50 +34,50 @@
         <div class="logo-shadow"></div>
         <div class="nav-links">
             <ul>
-                <li><a href="#about" class="nav-button"><span>01. </span>About</a></li>
-                <li><a href="#work" class="nav-button"><span>02. </span>Experience</a></li>
-                <li><a href="#projects" class="nav-button"><span>03. </span>Projects</a></li>
-                <li><a href="#contact" class="nav-button"><span>04. </span>Contact</a></li>
+                <li class="hide-down"><a href="#about" class="nav-button"><span>01. </span>About</a></li>
+                <li class="hide-down"><a href="#work" class="nav-button"><span>02. </span>Experience</a></li>
+                <li class="hide-down"><a href="#projects" class="nav-button"><span>03. </span>Projects</a></li>
+                <li class="hide-down"><a href="#contact" class="nav-button"><span>04. </span>Contact</a></li>
             </ul>
-            <div class="button-container nav-list">
+            <div class="button-container nav-list hide-down">
                 <a href="assets/Arjun Punekar CV.pdf" class="nav-button" target="_blank"><button>Resume</button></a>
                 <div class="button-shadow"></div>
             </div>
         </div>
-        <div class="mobile-icon">
+        <div class="mobile-icon hide-down">
             <div class="mobileline mob-one"></div>
             <div class="mobileline mob-two"></div>
             <div class="mobileline mob-three"></div>
         </div>
     </nav>
 
-    <!-- sidebar -->
-    <div class="sidebar-container-left">
-        <a href="https://www.linkedin.com/in/arjun-punekar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/arjunp8822" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="mailto:apunekar95@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-
     <!-- intro -->
     <section id="intro">
         <div class="container intro-container">
-            <h3>Hi, my name is</h3>
-            <h1>Arjun Punekar.</h1>
-            <h2>I build things for the web.</h2>
-            <p>I’m a software engineer specializing in building and designing exceptional digital
+            <h3 class="hide-up">Hi, my name is</h3>
+            <h1 class="hide-up">Arjun Punekar.</h1>
+            <h2 class="hide-up">I build things for the web.</h2>
+            <p class="hide-up">I’m a software engineer specializing in building and designing exceptional digital
                 experiences. I currently work as a Data Analyst at
                 <a href="https://www.retailinsight.io/" target="_blank">
                     <span>Retail Insight</span>
                 </a>
                 , optimising data solutions for some of Australia's largest retailers.
             </p>
-            <a href="#contact"><button>Get in touch!</button></a>
+            <a href="#contact" class="hide-up"><button>Get in touch!</button></a>
         </div>
     </section>
 
+    <!-- sidebar -->
+    <div class="sidebar-container-left hide-up">
+        <a href="https://www.linkedin.com/in/arjun-punekar/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/arjunp8822" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:apunekar95@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
     <!-- about -->
     <section id="about">
-        <div class="about-container container">
+        <div class="about-container container hide-up">
             <div class="header">
                 <h3><span>01. </span>About Me</h3>
                 <div class="header-line"></div>
@@ -131,7 +131,7 @@
 
     <!-- work -->
     <section id="work">
-        <div class="work-container container">
+        <div class="work-container container hide-up">
             <div class="header">
                 <h3><span>02. </span>Where I've Worked</h3>
                 <div class="header-line"></div>
@@ -244,14 +244,14 @@
     <!-- projects -->
     <section id="projects">
         <div class="container projects-container">
-            <div class="header">
+            <div class="header projects-header hide-up">
                 <h3><span>03. </span>My Projects</h3>
                 <div class="header-line"></div>
             </div>
 
             <div class="project-container">
 
-                <div class="project">
+                <div class="project hide-up">
                     <div class="project-img-container">
                         <img src="assets/tech/netflix.png" class="project-img" alt="netflix">
                         <div class="img-bg"></div>
@@ -279,7 +279,7 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project hide-up">
                     <div class="project-img-container">
                         <img src="assets/tech/netflix.png" class="project-img" alt="netflix">
                         <div class="img-bg"></div>
@@ -307,7 +307,7 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project hide-up">
                     <div class="project-img-container">
                         <img src="assets/tech/netflix.png" class="project-img" alt="netflix">
                         <div class="img-bg"></div>
@@ -341,7 +341,7 @@
     </section>
 
     <section id="contact">
-        <div class="container contact-container">
+        <div class="container contact-container hide-up">
             <div class="header">
                 <h3><span>04. </span>What's Next?</h3>
                 <div class="header-line"></div>

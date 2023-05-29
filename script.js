@@ -26,9 +26,6 @@ const mobileTwo = document.querySelector('.mob-two')
 const mobileThree = document.querySelector('.mob-three')
 const sections = document.querySelectorAll('section')
 const navList = document.querySelectorAll('.nav-button')
-
-console.log(navList)
-
 let openMobileNav = 0
 
 mobileIcon.addEventListener('click', () => {
@@ -114,3 +111,22 @@ mazars.addEventListener('click', () => {
     jdwesfarmers.classList.remove('jd-active')
     jdmazars.classList.add('jd-active')
 })
+
+// scroll animations
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        }
+    })
+})
+
+const hiddenElementsDown = document.querySelectorAll('.hide-down')
+hiddenElementsDown.forEach((el) => observer.observe(el))
+
+const hiddenElementsUp = document.querySelectorAll('.hide-up')
+hiddenElementsUp.forEach((el) => observer.observe(el))
+
+const hiddenElements = document.querySelectorAll('.hide')
+hiddenElements.forEach((el) => observer.observe(el))

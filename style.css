@@ -32,16 +32,14 @@
 
 .container {
     max-width: 1000px;
-    padding: 80px 0;
 }
 
 section {
     width: 100%;
-    padding: 0 80px;
+    padding: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
 }
 
 /* loader */
@@ -235,7 +233,7 @@ section {
 }
 
 .logo-shadow {
-    background-color: var(--green);
+    background-color: transparent;
     height: 45px;
     width: 45px;
     position: absolute;
@@ -740,6 +738,7 @@ section {
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
+    gap: 50px;
 }
 
 .project {
@@ -925,11 +924,92 @@ section {
     cursor: pointer;
 }
 
+/* animations */
+
+.hide-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s;
+}
+
+.hide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+.hide {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo {
+    transition-delay: 100ms;
+}
+
+.hide-down:nth-child(1) {
+    transition-delay: 400ms;
+}
+
+.hide-down:nth-child(2) {
+    transition-delay: 500ms;
+}
+
+.hide-down:nth-child(2) {
+    transition-delay: 600ms;
+}
+
+.hide-down:nth-child(3) {
+    transition-delay: 700ms;
+}
+
+.hide-down:nth-child(4) {
+    transition-delay: 800ms;
+}
+
+.hide-down:nth-child(5) {
+    transition-delay: 900ms;
+}
+
+.mobile-icon {
+    transition-delay: 300ms;
+}
+
+.intro-container .hide-up:nth-child(1) {
+    transition-delay: 1200ms;
+}
+
+.intro-container .hide-up:nth-child(2) {
+    transition-delay: 1300ms;
+}
+
+.intro-container .hide-up:nth-child(3) {
+    transition-delay: 1400ms;
+}
+
+.intro-container .hide-up:nth-child(4) {
+    transition-delay: 1500ms;
+}
+
+.intro-container .hide-up:nth-child(5) {
+    transition-delay: 1600ms;
+}
+
+.sidebar-container-left {
+    transition-delay: 2000ms;
+}
+
 .about-container,
 .work-container,
-.projects-container,
+.projects-header,
+.project,
 .contact-container {
-    margin-top: 100px;
+    transition-delay: 300ms;
 }
 
 @media (max-width: 1200px) {
@@ -964,20 +1044,16 @@ section {
         padding: 0 30px;
     }
 
-    .about-container,
-    .work-container,
-    .projects-container,
-    .contact-container {
-        margin-top: 80px;
-    }
-
     section {
-        padding: 0 30px;
-        margin-bottom: 0;
+        padding: 30px;
     }
 
     .container {
-        padding: 40px 0;
+        padding-top: 80px;
+    }
+
+    .intro-container {
+        padding-bottom: 80px;
     }
 
     .about-img-container {
@@ -1211,10 +1287,6 @@ section {
 
 @media (max-width: 480px) {
 
-    .container {
-        padding: 0;
-    }
-
     .intro-container {
         gap: 20px;
     }
@@ -1258,7 +1330,4 @@ section {
         gap: 40px;
     }
 
-    .contact-container {
-        margin-bottom: 50px;
-    }
 }
