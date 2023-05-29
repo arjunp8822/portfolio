@@ -203,7 +203,7 @@ section {
     background-color: transparent;
     border: 2px solid var(--green);
     border-radius: 4px;
-    padding: 0.75rem 1rem;
+    padding: 10px 50px;
     text-decoration: none;
     font-size: 14px;
     width: 80px;
@@ -1285,7 +1285,7 @@ section {
         text-align: start;
     }
 
-    .nav-links ul .hide-down {
+    .nav-links .hide-down {
         transition: 0s;
     }
 }
