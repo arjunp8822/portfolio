@@ -787,8 +787,9 @@ section {
 }
 
 .project-img {
-    width: 100%;
-    object-fit: contain;
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
     z-index: 1;
     border-radius: 4px;
 }
@@ -1288,6 +1289,12 @@ section {
     .nav-links .hide-down {
         transition: 0s;
     }
+
+    .project-img {
+        width: 100%;
+        height: auto;
+    }
+    
 }
 
 @media (max-width: 480px) {
